@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Custom object table
+        p.margin-bottom-20
+          a(href='/update-cobj') Add to this table
+        table.cats_table
+          thead
+            tr
+              th.cat_column Name
+              th.cat_column Description
+              th.cat_column Type
+              th.cat_column Color
+
+              tbody
+                each cat in data
+                  tr
+                    td= cat.properties.name
+                    td= cat.properties.description
+                    td= cat.properties.type
+                    td= cat.properties.color

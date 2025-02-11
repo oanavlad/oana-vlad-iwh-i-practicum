@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+        h1 Add a new cat
+
+        p.margin-bottom-20
+                  a(href='/') Return to the homepage
+
+        form(action='/update-cobj', method='POST')
+              div
+                label(for='name') Name:
+                input(type='text', id='name', name='name', placeholder='Enter name', required)
+
+              div
+                label(for='description') Description:
+                input(type='text', id='description', name='description', placeholder='Enter description', required)
+
+              div
+                label(for='type') Type:
+                input(type='text', id='type', name='type', placeholder='Enter type', required)
+
+              div
+                label(for='color') Color:
+                input(type='text', id='color', name='color', placeholder='Enter color', required)
+
+              div
+                input(type='submit', placeholder="Submit")
